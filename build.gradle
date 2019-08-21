@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '2.1.2.RELEASE'
+		springBootVersion = '2.1.7.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -24,8 +24,8 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 bootJar {
-	baseName = 'aws_project01'
-	version =  '0.1.0'
+	baseName = 'aws_project02'
+	version =  '0.1.2'
 }
 
 repositories {

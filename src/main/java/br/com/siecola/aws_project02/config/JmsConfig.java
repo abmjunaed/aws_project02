@@ -24,7 +24,7 @@ public class JmsConfig {
     private SQSConnectionFactory sqsConnectionFactory;
 
     @Bean
-    public DefaultJmsListenerContainerFactory defaultJmsListenerContainerFactory() {
+    public DefaultJmsListenerContainerFactory jmsListenerContainerFactory() {
         sqsConnectionFactory = new SQSConnectionFactory(
                 new ProviderConfiguration(),
                 AmazonSQSClientBuilder.standard()
