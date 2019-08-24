@@ -1,5 +1,6 @@
 package br.com.siecola.aws_project02.service;
 
+import br.com.siecola.aws_project02.model.Envelope;
 import br.com.siecola.aws_project02.model.ProductEvent;
 import br.com.siecola.aws_project02.model.SnsMessage;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -32,10 +33,14 @@ public class ProductEventConsumer {
         SnsMessage snsMessage = objectMapper.readValue(textMessage.getText(),
                 SnsMessage.class);
 
-        ProductEvent productEvent = objectMapper.readValue(
-                snsMessage.getMessage(), ProductEvent.class);
+        Envelope envelope = objectMapper.readValue(snsMessage.getMessage(),
+                Envelope.class);
 
-        log.info("Product event received - ProductId: {} - MessageId: {}",
+        ProductEvent productEvent = objectMapper.readValue(
+                envelope.getData(), ProductEvent.class);
+
+        log.info("Product event received - Event: {} - ProductId: {} - " +
+                        "MessageId: {}", envelope.getEventType(),
                 productEvent.getProductId(), snsMessage.getMessageId());
     }
 }
