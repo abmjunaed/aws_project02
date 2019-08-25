@@ -20,12 +20,12 @@ apply plugin: 'io.spring.dependency-management'
 apply plugin: 'com.palantir.docker'
 
 group = 'siecola'
-version = '0.0.1-SNAPSHOT'
+version = '0.4.1-SNAPSHOT'
 sourceCompatibility = '1.8'
 
 bootJar {
 	baseName = 'aws_project02'
-	version =  '0.1.3'
+	version =  '0.4.1'
 }
 
 repositories {
@@ -39,6 +39,9 @@ dependencies {
 	compile group: 'com.amazonaws', name: 'aws-java-sdk-sqs', version: '1.11.613'
 	compile group: 'com.amazonaws', name: 'amazon-sqs-java-messaging-lib', version: '1.0.8'
 	compile group: 'org.springframework', name: 'spring-jms', version: '5.1.9.RELEASE'
+
+	compile group: 'com.amazonaws', name: 'aws-java-sdk-dynamodb', version: '1.11.618'
+	compile group: 'com.github.derjust', name: 'spring-data-dynamodb', version: '5.1.0'
 	
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
