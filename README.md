@@ -1,6 +1,6 @@
 # Como desenvolver aplicações em Java para Amazon Web Services 
 
-Esse repositório de código fonte é relacionado a esse [livro](http://leanpub.com/amazonwebservice), sobre como desenvolver aplicações em **Java**  utilizando **Spring Boot** para serem executadas na **Amazon Web Services**. 
+Esse repositório de código fonte é relacionado a esse [livro](http://leanpub.com/amazonwebservice), sobre como desenvolver aplicações em **Java**  utilizando **Spring Boot** para serem executadas na **Amazon Web Services**, utilizando *container* **Docker** e [AWS ECS](https://aws.amazon.com/ecs/). 
 
 Nesse exemplo será construída uma aplicação com serviços REST para pesquisa de eventos recebidos através de uma fila do [AWS SQS](https://aws.amazon.com/sqs/) e armazenados em uma tabela do [AWS DynamoDB](https://aws.amazon.com/dynamodb). 
 
